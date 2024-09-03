@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #videoContainer {
+            display: none;
+            margin-top: 20px;
+        }
+        video {
+            width: 560px;
+            height: 315px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>CLICK MO BUTTON PARA SA LUCKY KISS</h1>
+    <button onclick="showVideo()">pindotin mo to</button>
+
+    <div id="videoContainer">
+        <video id="surpriseVideo" controls>
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        function showVideo() {
+            var videoContainer = document.getElementById('videoContainer');
+            var videoSource = document.getElementById('videoSource');
+
+            // Corrected file path with forward slashes
+            videoSource.src = "C:/Users/ADMIN/videotrippings/351424154_5985790811548357_7426061399901695636_n.mp4";
+            
+            var videoElement = document.getElementById('surpriseVideo');
+            videoElement.load(); // Reload the video with the new source
+            videoContainer.style.display = 'block';
+            videoElement.play(); // Autoplay the video
+        }
+    </script>
+</body>
+</html>
